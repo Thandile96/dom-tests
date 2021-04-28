@@ -68,9 +68,9 @@ describe("The bill with settings function", function(){
         it ("should be able to use the call cost set", function(){
             let settingsBill = billWithSettings();
             
-            settingsBill.setCriticalLevel(10);
             settingsBill.setCallCost(1.25);
             settingsBill.setSmsCost(0.45);
+            settingsBill.setCriticalLevel(10);
 
             settingsBill.makeCall();
             settingsBill.makeCall();
@@ -84,7 +84,7 @@ describe("The bill with settings function", function(){
 
         it ("should be able to use the call cost set for 2 calls at 1.85 each", function(){
             let settingsBill = billWithSettings();
-            settingsBill.setWarningLevel(5);
+            // settingsBill.setWarningLevel(5);
             settingsBill.setCriticalLevel(10);
 
 

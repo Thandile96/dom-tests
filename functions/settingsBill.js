@@ -71,7 +71,7 @@ function billWithSettings() {
 
     function totalClassName(){
 
-        if(hasReachedCriticalLevel){
+        if(hasReachedCriticalLevel()){
          return "critical"
         }
 
