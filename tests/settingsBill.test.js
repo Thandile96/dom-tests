@@ -162,7 +162,7 @@ describe("The bill with settings function", function(){
 
             settingsBill.setCallCost(2.50);
             settingsBill.setSmsCost(0.85);
-            settingsBill.setWarningLevel(10);
+            settingsBill.setCriticalLevel(10);
            
             settingsBill.makeCall();
             settingsBill.makeCall();
