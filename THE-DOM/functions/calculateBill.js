@@ -19,7 +19,6 @@ function calculateBill(billItem){
         }
         return billTotal;
             
-
     }
 
     function signsClass() {

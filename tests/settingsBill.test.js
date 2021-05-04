@@ -84,16 +84,13 @@ describe("The bill with settings function", function(){
 
         it ("should be able to use the call cost set for 2 calls at 1.85 each", function(){
             let settingsBill = billWithSettings();
-            // settingsBill.setWarningLevel(5);
             settingsBill.setCriticalLevel(10);
-
 
             settingsBill.setCallCost(1.85);
             settingsBill.setSmsCost(0.45);
 
             settingsBill.makeCall();
             settingsBill.makeCall();
-            // settingsBill.makeCall();
 
             assert.equal(3.70, settingsBill.getTotalCost());
             assert.equal(3.70, settingsBill.getTotalCallCost());
@@ -169,7 +166,6 @@ describe("The bill with settings function", function(){
             settingsBill.makeCall();
             settingsBill.makeCall();
             
-
             assert.equal("critical", settingsBill.totalClassName());
 
         });
@@ -180,16 +176,13 @@ describe("The bill with settings function", function(){
             settingsBill.setCallCost(2.50);
             settingsBill.setSmsCost(0.85);
 
-            // settingsBill.setWarningLevel(8);
             settingsBill.setCriticalLevel(10);
            
             settingsBill.makeCall();
             settingsBill.makeCall();
             settingsBill.makeCall();
             settingsBill.makeCall();
-            // settingsBill.makeCall();
             
-
             assert.equal("critical", settingsBill.totalClassName());
             assert.equal(10, settingsBill.getTotalCallCost());
 
@@ -209,9 +202,7 @@ describe("The bill with settings function", function(){
             settingsBill.makeCall();
             settingsBill.makeCall();
             settingsBill.makeCall();
-            // settingsBill.makeCall();
             
-
             assert.equal("critical", settingsBill.totalClassName());
             assert.equal(10, settingsBill.getTotalCallCost());
             

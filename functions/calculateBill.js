@@ -1,4 +1,4 @@
-
+function calcBills() {
 var type;
 function calculateBill(billItem){
             
@@ -21,7 +21,7 @@ function calculateBill(billItem){
 
     }
 
-    function classLists() {
+    function signsClass() {
 
        if (calculateBill(type) >= 20 && calculateBill(type) < 30 ){
             return "warning";
@@ -34,7 +34,12 @@ function calculateBill(billItem){
 
         return calculateBill(type);
     }
+    return {
+        calculateBill,
+        signsClass
+    }
 
+}
               
    
     

@@ -1,38 +1,32 @@
 function radioBill() {
-    var callCost2 = 0;
-    var smsCost2 = 0;
-    var callsTotal = 0;
-    var smssTotal = 0;
+   
+    var callsTotalsTwo = 0;
+    var smsTotalsTwo = 0;
     
-
-
-    function givenSmsCost(sms) {
-        smsCost2 += sms;
-    }
-
-    function givenCallCost(call) {
-        callCost2 += call;
-    }
-
-    function sendSmss(){
-           smssTotal += smsCost2;
+  function getBills(billItemType) {
+       var item = billItemType.trim();
         
-    }
-    
-    function makeAcall(){
-           callsTotal += callCost2;
-    }
-
-    function getTotalCost2(){
-        return callsTotal+ smssTotal;
-    }
+         if (item === "call") {
+            callsTotalsTwo += 2.75;
+            
+         }
+        
+         else if (item === "sms"){
+            smsTotalsTwo += 0.75;
+            
+        }
+  }
 
     function getTotalCalls() {
-        return callsTotal;
+        return callsTotalsTwo;
     }
 
     function getTotalSms() {
-        return smssTotal;
+        return smsTotalsTwo;
+    }
+
+    function getTotalCost2(){
+        return callsTotalsTwo + smsTotalsTwo;
     }
 
     function billLevels(){
@@ -45,29 +39,15 @@ function radioBill() {
         }
     }
 
-
-    function givenDangerLevel(){
-        return dangerLevel;
-    }
-
-    function givenWarningLevel(){
-        return warningLevel;
-    }
-
     
     return {
-       
-        makeAcall,
-        sendSmss,
+    
+        getBills,
         getTotalCost2,
         getTotalCalls,
         getTotalSms,
-        givenCallCost,
-        givenSmsCost,
+        
         billLevels,
-        givenWarningLevel,
-        givenDangerLevel,
-
 
     }
 
